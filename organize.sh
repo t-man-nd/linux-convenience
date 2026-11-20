@@ -6,13 +6,8 @@
 #   - Duplicate handling: append _1, _2, _3, ... before the extension
 #   - Only processes regular files at the root of ~/Downloads (no subdirs, no hidden files)
 #   - Unrecognized formats remain in ~/Downloads untouched
-#
-# Usage:
-#   ./organize.sh            # actually move files
-#   ./organize.sh --dry-run  # preview only, nothing is moved
 
-set -uo pipefail   # NOTE: intentionally NO -e (avoids false exits from arithmetic ops)
-
+set -uo pipefail   
 # ─── Flags ─────────────────────────────────────────────────────────────────────
 DRY_RUN=false
 for arg in "$@"; do
