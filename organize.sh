@@ -81,7 +81,7 @@ resolve_dest() {
             echo "$dest_path"
             return
         fi
-        counter=$((counter + 1))   # safe: no (( )) pitfall
+        counter=$((counter + 1))   
     done
 }
 
